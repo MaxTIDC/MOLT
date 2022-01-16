@@ -1,0 +1,128 @@
+% MOLT (Max's Own LaTeX Template)
+% Version 2.11
+% Edited 2021/12/16
+
+% Packages and document settings
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{isodate}
+\usepackage{tikz}
+\usepackage{framed}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{natded}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{tipa}
+\usepackage[linguistics]{forest}
+\usepackage{subfig}
+
+\definecolor{shadecolor}{gray}{0.9}
+\pagestyle{fancy}
+\parindent = 0pt
+\cleanlookdateon
+
+% Commands - for pure mathematics
+\newcommand{\derivn}[1]{\frac{d^{#1}y}{dx^{#1}}}
+\newcommand{\newtdiff}[2]{\frac{\Delta #1 (#2)}{\Delta #2}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\rank}[1]{\text{rk}(#1)}
+\newcommand{\rref}[1]{\text{rref}(#1)}
+\newcommand{\kernel}[1]{\text{ker}(#1)}
+\renewcommand{\dim}[1]{\text{dim}(#1)}
+\newcommand{\image}[1]{\text{Im}(#1)}
+\newcommand{\tp}[1]{#1^\top}
+\newcommand{\vs}[1]{\text{span} \left\{ #1 \right\}}
+
+% Commands - for discrete mathematics
+\newcommand{\dis}[1]{\texttt{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\pre}{$_{pre}$}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\pair}[1]{\langle #1 \rangle}
+\newcommand{\tuple}[1]{\langle #1 \rangle}
+\newcommand{\dom}[1]{\text{dom}(#1)}
+\newcommand{\addr}[1]{\text{\textopencorner} #1 \text{\textcorner}}
+\newcommand{\bigO}[1]{O(#1)}
+\newcommand{\bigTheta}[1]{\Theta(#1)}
+
+% Environments
+\newenvironment{prf}{\textbf{Proof.}}{\qedsymbol}
+\newenvironment{amatrix}[1]{%
+  \left[\begin{array}{{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right]
+}
+\newenvironment{aMatrix}[1]{%
+  \left[\begin{array}{{}*{#1}{c}|{}*{#1}{c}}
+}{%
+  \end{array}\right]
+}
+
+% Math operators
+\DeclareMathOperator{\derivone}{\frac{dy}{dx}}
+\DeclareMathOperator{\rarrow}{\rightarrow}
+\DeclareMathOperator{\darrow}{\leftrightarrow}
+\DeclareMathOperator{\rArrow}{\Rightarrow}
+\DeclareMathOperator{\dArrow}{\Leftrightarrow}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\C}{\mathbb{C}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\iden}{\approx}
+\DeclareMathOperator{\perm}{\sim}
+
+% Theorem styles
+\newtheorem{theorem}{Theorem}
+\newtheorem{thm}{Theorem}
+
+% ##### MODIFY YOUR TITLE HERE #####
+\title{MOLT - Max's Own \LaTeX \ Template \\ Sample Document}
+\author{Sample Author}
+\date{\today}
+
+% ##### MODIFY HEADING/FOOTING HERE #####
+\lhead{Sample Author}
+\chead{Sample Document}
+\rhead{\today}
+\lfoot{MOLT - Max's Own \LaTeX \ Template (Spring 2021)}
+\cfoot{}
+\rfoot{\thepage}
+
+% ##### DOCUMENT STARTS HERE #####
+\begin{document}
+\maketitle
+
+\section*{Sample Section}
+
+\subsection*{Sample Subsection}
+This is some sample text. \\
+
+Here are some sample text, in code style: \code{printf(``Hello world!'');} \\
+
+There are plenty of commands defined for mathematical (pure and discrete) symbols and formulae - feel free to look them up in the heading section of the \code{.tex} file.
+
+\newpage
+
+\section{Sample Section, Numbered}
+
+\textbf{Question 1. (42 marks)} This is a sample question. 
+
+\begin{shaded}
+    This is the sample sample, with the paragraph shaded. \\
+    
+    \emph{This template is pretty good at turning college worksheets into paperless format.}
+\end{shaded}
+
+\end{document}
